@@ -16,7 +16,7 @@ route.get('/faq',controller.faq);
 
 route.post('/faq',controller.faq);
 
-route.delete('/delete/:id',controller.delete);
+route.get('/delete/:id',controller.delete);
 
 route.get('/faq/edit/:preQ/:newQ',controller.edit);
 
