@@ -1,0 +1,21 @@
+doctype html
+html(lang="en")
+    head
+        style 
+            include ../public/css/home.css
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Home 
+    body 
+        header 
+            h1 Welcome to the FAQ Creator
+        section 
+            if show != "undefined"
+                center 
+                    h3(style = "color : red;") All fields are mandatory !!!
+            form(action="/postQuestion", method="post")
+                textarea(name="question",placeholder = "Post your question !!!", cols="30", rows="2")
+                div.btn_Container
+                    button(id= "post",type="submit") Post
+                    button(id="getFAQS" formaction = "/faq") Posted FAQs

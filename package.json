@@ -1,0 +1,21 @@
+{
+  "name": "faq",
+  "version": "1.0.0",
+  "description": "FAQ Round",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Yashwnat Sahu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7",
+    "pug": "^3.0.2",
+    "socket.io": "^4.1.3"
+  }
+}

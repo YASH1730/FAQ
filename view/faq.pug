@@ -1,0 +1,47 @@
+doctype html
+html(lang="en")
+    head
+        style 
+            include ../public/css/faq.css
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Home
+    body
+        header     
+            a(href="/") 
+                h1 F-A-Q 
+        section1 
+            if ques != "undefined"
+                each val in ques 
+                    p(style = "display : none; " class = "getval") #{val._id}
+                    div.container
+                        p.ques 
+                            <strong> Question :- </strong> #{val.Question}
+                            a(href="/delete/"+val._id) 
+                                button(id ="delete" type="submit") Delete  
+                            button(class ="edit") Edit  
+                        textarea(class = "textArea" placeholder = "Edit the question !!!" cols="30", rows="2")
+                        div.btns
+                            button( class ="cancel") Cancel
+                            button( class ="done") Done
+                        if ans != "undefined"
+                            each ans in answer  
+                                if ans.QuesId == val._id 
+                                    p.ans 
+                                        <strong> Answer :- </strong> #{ans.Answer}
+                                
+                        form(action="/postAnswer/"+val._id, class = 'Postform' method="post")
+                            textarea(name="Answer", placeholder = "Type your answer here !!!" cols="30", rows="2")
+                            button( id ="post" type="submit") Post
+                        
+            if ques == ""
+                    h3(id = "notify") No, questions yet &#128528; !!! 
+                        br
+                        a(href="/") Click here to post !!! 
+        script
+            include ../public/js/faq.js
+    
+
+        
+            

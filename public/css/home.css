@@ -1,0 +1,61 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+    padding: 10px;
+    margin-top: 10%;
+}
+
+form{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form textarea{
+    width: 80%;
+    margin: 2% auto;
+    resize: none ;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+}
+
+
+button{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 2px;
+    font-weight: bold;
+}
+
+
+.btn_Container{
+    display: flex;
+    width: 80%;
+    margin: 20px auto;
+    /* border: 2px solid; */
+    justify-content: center;
+
+}
+
+
+#post{
+    padding: 5px;
+    background-color: #599ee5;
+    margin-right: 50px;
+}
+
+#getFAQS{
+    padding: 5px;
+    background-color: #e55959;
+    
+}
